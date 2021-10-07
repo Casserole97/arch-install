@@ -12,13 +12,13 @@ echo p
 echo 1
 echo
 echo -$swap_amount"G"
-echo y
+echo
 echo n
 echo p
 echo 2
 echo
 echo
-echo y
+echo
 echo t
 echo 2
 echo 82
