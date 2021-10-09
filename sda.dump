@@ -1,0 +1,8 @@
+label: dos
+label-id: 0xcc278c27
+device: /dev/sda
+unit: sectors
+sector-size: 512
+
+/dev/sda1 : start=        2048, size=  1448370176, type=83
+/dev/sda2 : start=  1448372224, size=    16776944, type=82
