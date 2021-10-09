@@ -20,10 +20,10 @@ echo "Installed packages"
 genfstab -U /mnt >> /mnt/etc/fstab
 echo "Generated fstab"
 
-#Copies post chroot script to /mnt and executes it with arch-chroot
+#Copies post chroot script to /mnt, executes it with arch-chroot and finishes the process
 cp post_chroot.sh /mnt
 arch-chroot /mnt bash post_chroot.sh
-rm post_chroot.sh /mnt
+rm /mnt/post_chroot.sh
 umount -R /mnt
 echo "Done! Remove USB after poweroff"
 poweroff
