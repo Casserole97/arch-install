@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "Chrooted into /mnt"
+
+#Installs more packages
+pacman -S --needed -noconfirm iwd dhcpcd grub intel-ucode vim sudo git base-devel
+echo "Installed more packages"
+
 #Takes user input
 echo "Please input these parameters"
 read -p "Hostname: " hostname
