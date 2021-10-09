@@ -3,7 +3,7 @@
 echo "Chrooted into /mnt"
 
 #Installs more packages
-pacman -S --needed -noconfirm iwd dhcpcd grub intel-ucode vim sudo git base-devel
+pacman -S --needed --noconfirm iwd dhcpcd grub intel-ucode vim sudo git base-devel
 echo "Installed more packages"
 
 #Takes user input
@@ -41,4 +41,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "Installed and configured grub"
 
 #Finishing touches
-echo "Done!"
+systemctl enable iwd dhcpcd
+ip link set wlan0 up
+echo "Exiting chroot"
