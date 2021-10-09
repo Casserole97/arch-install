@@ -24,3 +24,6 @@ echo "Generated fstab"
 cp post_chroot.sh /mnt
 arch-chroot /mnt bash post_chroot.sh
 rm post_chroot.sh /mnt
+umount -R /mnt
+echo "Done! Remove USB after poweroff"
+poweroff
