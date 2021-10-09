@@ -8,6 +8,7 @@ sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 5/" /etc/pacman.conf
 echo [multilib]
 echo Include = /etc/pacman.d/mirrorlist
 ) >> /etc/pacman.conf
+pacman -Sy --noconfirm
 pacman -S --needed --noconfirm iwd dhcpcd grub intel-ucode vim sudo git base-devel bind nftables
 echo "Installed more packages"
 
