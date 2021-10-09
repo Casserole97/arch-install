@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "\nCHROOTED\n"
+echo "CHROOTED"
 
 #Configures pacman and installs more packages
 sed -i "s/#Color/Color\nILoveCandy/" /etc/pacman.conf
@@ -10,7 +10,7 @@ echo Include = /etc/pacman.d/mirrorlist
 ) >> /etc/pacman.conf
 pacman -Sy --noconfirm
 pacman -S --needed --noconfirm iwd dhcpcd grub intel-ucode vim sudo git base-devel bind nftables
-echo "\nINSTALLED MORE PACKAGES\n"
+echo "INSTALLED MORE PACKAGES"
 
 #Takes user input
 echo "PLEASE INPUT THESE PARAMETERS"
@@ -24,7 +24,7 @@ hwclock --systohc
 sed -i "s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/" /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "\nCONFIGURED SOME THINGS\n"
+echo "CONFIGURED SOME THINGS"
 
 #Hostname and password
 echo $hostname > /etc/hostname
@@ -38,12 +38,12 @@ echo 127.0.1.1        $hostname
 echo $password
 echo $password
 ) | passwd
-echo "\nCONFIGURED HOST STUFF AND PASSWORD\n"
+echo "CONFIGURED HOST STUFF AND PASSWORD"
 
 #Bootloader
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-echo "\nINSTALLED AND CONFIGURED GRUB\n"
+echo "INSTALLED AND CONFIGURED GRUB"
 
 #Finishing touches
 systemctl enable iwd dhcpcd named nftables
@@ -54,4 +54,4 @@ echo $password
 echo $password
 ) | passwd $username
 echo "$username ALL=(ALL) ALL" | EDITOR="tee -a" visudo
-echo "\nEXITING CHROOT\n"
+echo "EXITING CHROOT"
