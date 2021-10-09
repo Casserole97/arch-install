@@ -2,7 +2,7 @@
 
 #Updates the system clock
 timedatectl set-ntp true
-echo "Updated system clock"
+echo "\nUPDATED SYSTEM CLOCK\n"
 
 #Partitions the disk, formats the partitions, mounts root and enables swap
 sfdisk -W always /dev/sda < sda.dump
@@ -10,20 +10,20 @@ mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 mount /dev/sda1 /mnt
 swapon /dev/sda2
-echo "Partitioned the disk, formatted and mounted root and enabled swap"
+echo "\nPARTITIONED THE DISK, FORMATTED AND MOUNTED ROOT AND ENABLED SWAP\n"
 
 #Installs essential packages to root
 pacstrap /mnt base linux linux-firmware man-db man-pages texinfo
-echo "Installed packages"
+echo "\nINSTALLED PACKAGES\n"
 
 #Generates an fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
-echo "Generated fstab"
+echo "\nGENERATED FSTAB\n"
 
 #Copies post chroot script to /mnt, executes it with arch-chroot and finishes the process
 cp post_chroot.sh /mnt
 arch-chroot /mnt bash post_chroot.sh
 rm /mnt/post_chroot.sh
 umount -R /mnt
-echo "Done! Remove USB after poweroff"
+echo "\nDONE! REMOVE USB AFTER POWEROFF\n"
 poweroff
