@@ -4,7 +4,7 @@ read -p "Hostname: " new_hostname
 read -p "Username: " new_username
 read -ps "Password: " new_password
 timedatectl set-ntp true
-sfdisk /dev/sda < sda.dump
+sfdisk -W always /dev/sda < sda.dump
 mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 mount /dev/sda1 /mnt
