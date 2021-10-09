@@ -4,7 +4,7 @@
 echo "Please input these parameters"
 read -p "Hostname: " hostname
 read -p "Username: " username
-echo -s -p "Password: " password
+read -s -p "Password: " password
 
 #Updates the system clock
 timedatectl set-ntp true
