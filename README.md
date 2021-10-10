@@ -26,6 +26,6 @@ sudo /post_install.sh
 
 Good question! Let's just say I forget things easily...
 
-> Can I run this script on my machine?
+> Should I run this script on my machine?
 
-No! You may _try_, but it won't lead to anything good probably. Almost everything is hard coded and configured to my liking, needs and hardware.
+No. You may try, but it probably won't lead to anything good. Almost everything is hard coded and configured to my liking, needs and hardware.
