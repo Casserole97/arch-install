@@ -1,5 +1,5 @@
 ## What is this?
-Just a personal arch install script. **I don't suggest running it on your machine.**
+Just a personal arch install script. You can check it out if you need some pointers on how to make your own, but I'm not claiming that it's perfect. **I don't suggest running it on your machine.**
 
 ## Usage
 1. Boot into the live arch environment
