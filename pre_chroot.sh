@@ -13,7 +13,7 @@ swapon /dev/sda2
 echo "PARTITIONED THE DISK, FORMATTED AND MOUNTED ROOT AND ENABLED SWAP"
 
 #Installs essential packages
-pacstrap /mnt base linux linux-firmware man-db man-pages texinfo iwd dhcpcd grub intel-ucode vim sudo
+pacstrap /mnt base linux linux-firmware man-db man-pages texinfo iwd dhcpcd bind nftables grub intel-ucode vim sudo
 echo "INSTALLED PACKAGES"
 
 #Generates an fstab file
