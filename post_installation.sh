@@ -7,6 +7,7 @@ ip link set wlan0 up
 systemctl enable --now iwd dhcpcd named nftables
 echo "Connect to the internet:"
 iwctl
+echo "Wait for 5 seconds..." #Doing this because sometimes it doesn't connect fast enough before pacman is used
 sleep 5s
 echo "Connection (should be) estabilished!"
 
@@ -27,3 +28,4 @@ cd paru
 sudo -u $username makepkg -si --noconfirm --needed
 cd
 rm -r paru
+echo "INSTALLED PARU"
