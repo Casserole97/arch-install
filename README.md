@@ -12,6 +12,11 @@ chmod a+x pre_chroot.sh
 ./pre_chroot.sh
 ```
 4. Sit back and relax
+5. After reboot,
+```
+sudo ./post_install.sh
+```
+6. Done!
 
 ## Q&A
 > If it's only for your usage, then why do you need instructions?
