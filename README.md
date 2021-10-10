@@ -25,3 +25,7 @@ sudo /post_install.sh
 > If it's only for your usage, then why do you need instructions?
 
 Good question! Let's just say I forget things easily...
+
+> Can I run this script on my machine?
+
+No! You may _try_, but it won't lead to anything good probably. Almost everything is hard coded and configured to my liking, needs and hardware.
