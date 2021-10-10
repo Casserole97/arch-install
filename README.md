@@ -17,7 +17,7 @@ chmod a+x pre_chroot.sh
 4. Sit back and relax
 5. After the reboot, log in as the new User and do:
 ```
-sudo /home/post_install.sh
+sudo ../.post_install.sh
 ```
 6. Done!
 
