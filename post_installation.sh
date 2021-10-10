@@ -55,7 +55,7 @@ rm -r paru
 echo "INSTALLED PARU"
 
 #Finishing steps
-rm /post_install.sh
+rm /home/post_install.sh
 echo "FINISHED. REBOOT IN 5 SECONDS"
 sleep 5
 reboot
