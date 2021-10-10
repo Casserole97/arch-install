@@ -24,7 +24,10 @@ echo "GENERATED FSTAB"
 cp {post_chroot.sh,post_install.sh} /mnt
 chmod a+x /mnt/{post_chroot.sh,post_install.sh}
 arch-chroot /mnt ./post_chroot.sh
+
+#Finishing steps
 rm /mnt/post_chroot.sh
 umount -R /mnt
-echo "DONE! REMOVE USB AFTER POWEROFF"
+echo "DONE! REMOVE USB AFTER POWEROFF IN 5 SECONDS"
+sleep 5s
 poweroff
