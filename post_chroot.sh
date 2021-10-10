@@ -17,12 +17,9 @@ echo "CONFIGURED SOME THINGS"
 
 #Hostname and password
 echo $hostname > /etc/hostname
-(
-echo
-echo 127.0.0.1        localhost
-echo ::1              localhost
-echo 127.0.1.1        $hostname
-) >> /etc/hosts
+echo "127.0.0.1        localhost
+::1              localhost
+127.0.1.1        $hostname" >> /etc/hosts
 (
 echo $password
 echo $password
