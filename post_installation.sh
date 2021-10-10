@@ -19,7 +19,7 @@ echo [multilib]
 echo Include = /etc/pacman.d/mirrorlist
 ) >> /etc/pacman.conf
 pacman -Syu --noconfirm
-pacman -S --needed --noconfirm base-devel git nvidia nvidia-utils lib32-nvidia-utils
+pacman -S --needed --noconfirm base-devel git nvidia nvidia-utils lib32-nvidia-utils xorg-server xorg-xinit
 echo "INSTALLED MORE PACKAGES AND MODIFIED PACMAN"
 
 #Installs paru
@@ -29,3 +29,4 @@ sudo -u $username makepkg -si --noconfirm --needed
 cd
 rm -r paru
 echo "INSTALLED PARU"
+
