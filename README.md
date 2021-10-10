@@ -1,5 +1,5 @@
 ## What is this?
-Just a personal arch install script. You can check it out if you need some pointers on how to make your own, but I'm not claiming that it's perfect; I'm only an amateur myself, after all.
+Just a personal arch install script. You can check it out if you need some pointers on how to make your own, but I'm not claiming that it's perfect; I'm only an amateur myself.
 
 **I don't suggest running it on your machine.**
 
