@@ -35,7 +35,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "INSTALLED AND CONFIGURED GRUB"
 
 #Finishing touches
-useradd -m $username
+useradd -m -s /bin/fish $username
 (
 echo $password
 echo $password
