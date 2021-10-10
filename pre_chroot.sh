@@ -21,8 +21,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo "GENERATED FSTAB"
 
 #Copies post chroot script to /mnt, executes it with arch-chroot and finishes the process
-cp post_chroot.sh /mnt
-chmod a+x /mnt/post_chroot.sh
+cp {post_chroot.sh,post_install.sh} /mnt
+chmod a+x /mnt/{post_chroot.sh,post_install.sh}
 arch-chroot /mnt ./post_chroot.sh
 rm /mnt/post_chroot.sh
 umount -R /mnt
