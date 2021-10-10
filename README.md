@@ -5,8 +5,11 @@ Just a personal arch install script. You can check it out if you need some point
 
 ## Usage
 1. Boot into the live arch environment
-2. Clone the repo (maybe find a faster method later?)
-3. 
+2. Connect to the internet
+3. Update pacman repos and download git
+4. Clone the repo
+5. Change directory to the repo
+6. 
 ```
 chmod a+x pre_chroot.sh
 ./pre_chroot.sh
