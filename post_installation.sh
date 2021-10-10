@@ -26,7 +26,7 @@ pacman -S --needed --noconfirm base-devel git nvidia nvidia-utils lib32-nvidia-u
 echo "INSTALLED MORE PACKAGES AND MODIFIED PACMAN"
 
 #Nvidia config
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
+cp /etc/X11/xinit/xinitrc /home/$username/.xinitrc
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia.drm_modeset=1"/' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "
@@ -46,7 +46,7 @@ Section "OutputClass"
     ModulePath "/usr/lib/xorg/modules"
 EndSection
 " >> /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
-sed -i '1a xrandr --setprovideroutputsource modesetting NVIDIA-0\nxrandr --auto' ~/.xinitrc
+sed -i '1a xrandr --setprovideroutputsource modesetting NVIDIA-0\nxrandr --auto' /home/$username/.xinitrc
 
 #Installs paru
 sudo -u $username git clone https://aur.archlinux.org/paru.git
