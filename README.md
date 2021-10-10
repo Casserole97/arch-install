@@ -12,7 +12,7 @@ chmod a+x pre_chroot.sh
 ./pre_chroot.sh
 ```
 4. Sit back and relax
-5. After reboot,
+5. After the reboot, log in as the new User and do:
 ```
 sudo /post_install.sh
 ```
