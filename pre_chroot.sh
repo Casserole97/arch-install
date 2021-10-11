@@ -26,6 +26,7 @@ chmod a+x /mnt/post_chroot.sh
 arch-chroot /mnt ./post_chroot.sh
 
 #Finishing steps
+rm /mnt/post_chroot.sh
 cp post_install.sh /mnt/post_install.sh
 chmod a+x /mnt/post_install.sh
 umount -R /mnt
