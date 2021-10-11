@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#Berry
-paru -S berry-git
+#Decide on DE/WM
 #EDIT ~/.xinitrc
 #also install a terminal
 
