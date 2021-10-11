@@ -23,7 +23,7 @@ echo "INSTALLED MORE PACKAGES AND MODIFIED PACMAN"
 
 #Nvidia config
 cp /etc/X11/xinit/xinitrc /home/$username/.xinitrc
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia.drm_modeset=1"/' /etc/default/grub
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia-drm.modeset=1"/' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 echo 'Section "OutputClass"
     Identifier "intel"
