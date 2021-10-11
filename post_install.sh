@@ -18,7 +18,6 @@ echo "CONNECTION (SHOULD BE) ESTABILISHED!"
 #Configures pacman and installs more packages
 sed -i "s/#Color/Color\nILoveCandy/" /etc/pacman.conf
 sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 5/" /etc/pacman.conf
-
 echo "[multilib]
 Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Syu --noconfirm
