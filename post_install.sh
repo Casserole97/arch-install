@@ -3,9 +3,6 @@
 #Since this script is ran with sudo, I need to do this to keep track of the user's actual username
 username=$(logname)
 
-#Turns off fish greeting
-echo "set -U fish_greeting" | fish
-
 #Manages the wifi connection
 ip link set wlan0 up
 systemctl enable --now iwd dhcpcd named nftables
