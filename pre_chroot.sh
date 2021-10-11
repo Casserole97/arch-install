@@ -26,8 +26,8 @@ chmod a+x /mnt/post_chroot.sh
 arch-chroot /mnt ./post_chroot.sh
 
 #Finishing steps
-cp post_install.sh /mnt/root/post_install.sh
-chmod a+x /mnt/root/post_install.sh
+cp post_install.sh /mnt/post_install.sh
+chmod a+x /mnt/post_install.sh
 umount -R /mnt
 echo "DONE! REMOVE USB AFTER POWEROFF"
 poweroff
