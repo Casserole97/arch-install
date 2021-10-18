@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-qtile xfce4-terminal (config it) flameshot (config it) alsa-utils (unmute sound) cozette envy-r discord firefox neofetch xdg-user-dirs
+paru -S xfce4 xfce4-goodies alsa-utils pulseaudio pulseaudio-alsa pavucontrol gvfs xdg-user-dirs discord firefox steam neofetch
 enable autostart
 EDIT ~/.xinitrc (make it editable by default)
-
-#Sound config
